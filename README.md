@@ -1,2 +1,2 @@
 # AI-Datanalysis
-AI-powered chatbot tool for data analisys.
+AI-powered chatbot tool for data analysis.
