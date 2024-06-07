@@ -2,6 +2,7 @@
 px.scatter(<SET EX: df = pd.DataFrame(DF_*)>,
            x=<SET>,
            y=<SET>,
+           color=<SET, WHEN REQUIRED>,
            color_discrete_sequence=px.colors.qualitative.Plotly,
            labels=<SET>,
            hover_data=<SET>,)
