@@ -59,7 +59,7 @@ streamlit run app.py
 
 ## Usage
 
-After installation access the app in the browser using the [http://0.0.0.0:](http://0.0.0.0:80) or [http://localhost](http://localhost:80)
+After installation access the app in the browser using the [http://0.0.0.0:8501](http://0.0.0.0:8501) or [http://localhost:8501](http://localhost:8501)
 
 ### Load dataset
 
