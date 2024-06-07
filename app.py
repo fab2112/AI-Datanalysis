@@ -41,7 +41,9 @@ if "response_error_var" not in st.session_state:
 if "sample_var" not in st.session_state:
     st.session_state["sample_var"] = 0   
 if "agent_var" not in st.session_state:
-    st.session_state["agent_var"] = None 
+    st.session_state["agent_var"] = None
+if "geojson_var" not in st.session_state:
+    st.session_state["geojson_var"] = None
 
 
 def clear_chat_history() -> None:
@@ -380,8 +382,7 @@ def main() -> None:
                     type=["json"],
                 )
                 if uploaded_json_file is not None:
-                    with open("./maps_configs/geojson_data.json", "wb") as f:
-                        f.write(uploaded_json_file.getbuffer())
+                    st.session_state["geojson_var"] = uploaded_json_file.getvalue().decode("utf-8")
 
                 mapbox_token = st.text_input(
                     "🔑 &nbsp;Mapbox token ", type="password", key="password_2"

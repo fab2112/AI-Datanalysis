@@ -19,7 +19,6 @@ ENV PATH="/home/appuser/venv/bin:${PATH}"
 # Copy project
 COPY /.streamlit  /home/appuser/.streamlit
 COPY /css  /home/appuser/css
-COPY /maps_configs  /home/appuser/maps_configs
 COPY /ragdata  /home/appuser/ragdata
 COPY app.py /home/appuser
 COPY agent.py /home/appuser

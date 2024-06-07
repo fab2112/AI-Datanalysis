@@ -4,6 +4,7 @@ import sys
 import json
 import builtins
 import traceback
+import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go
 
@@ -64,6 +65,7 @@ class AgentAI:
         self.break_run = False
         self.verbose = verbose
         self.last_prompt = None
+        self.last_code = ""
 
     def __del__(self):
         pass
@@ -85,10 +87,6 @@ class AgentAI:
 
         attempts_var = 0
         prompt_ = prompt
-
-        # Reset code file
-        with open("code.py", "w") as f_:
-            f_.write("")
 
         while attempts_var <= self.max_attempts:
             self.last_prompt = prompt_
@@ -117,8 +115,7 @@ class AgentAI:
                     else:
                         code = 'raise Exception("No code returned, try again.")'
 
-                    with open("code.py", "w") as f_:
-                        f_.write(code)
+                    self.last_code = code
 
                     code_result = self.exec_code(code)
                     return code_result
@@ -128,9 +125,6 @@ class AgentAI:
 
             except Exception as e:
                 
-                with open("code.py", "r") as f_:
-                    code = f_.read()
-
                 # More randomness for error correction
                 if attempts_var > self.max_attempts / 2:
                     self.llm.temperature = 0.5
@@ -145,7 +139,7 @@ class AgentAI:
                     print(f"{Fore.LIGHTRED_EX}\nExecution error:\n{error_message}{Fore.RESET}\n")
 
                 # Set line in error code
-                lines = code.split("\n")
+                lines = self.last_code.split("\n")
                 formatted_lines = [
                     f"|Line-{i+1:03}| {line}" for i, line in enumerate(lines)
                 ]
@@ -182,10 +176,7 @@ class AgentAI:
         Returns:
             str: string of last code.
         """
-
-        with open("code.py", "r") as code_file:
-            code = code_file.read()
-        return code
+        return self.last_code
 
 
     def get_last_prompt(self) -> str:
@@ -319,7 +310,10 @@ class AgentAI:
         for i, var in enumerate(self.data):
             global_env[f"DF_{i+1}"] = var
 
-        geojson = json.load(open("maps_configs/geojson_data.json"))
+        if st.session_state["geojson_var"] is not None:
+            geojson = json.loads(st.session_state["geojson_var"])
+        else:
+            geojson = ""
         global_env["GEOJSON"] = [geojson]
 
         return global_env

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "AI-Datanalysis"
-version = "0.1.0"
+version = "0.1.1"
 description = "AI-powered chatbot tool for data analysis."
 authors = ["Fabrício Siqueira"]
 license = "MIT"
