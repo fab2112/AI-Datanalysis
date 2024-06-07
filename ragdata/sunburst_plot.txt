@@ -1,0 +1,38 @@
+# Plot
+px.sunburst(<SET EX: df = pd.DataFrame(DF_*)>,
+            path=[<SET>], 
+            values=<SET>, 
+            color=<SET>, 
+            parents=<SET, IF NECESSARY>,
+            names=<SET, IF NECESSARY>,
+            ids=<SET, IF NECESSARY>,
+            hover_data=<SET>,
+            color_discrete_map=<SET, IF NECESSARY>,
+            color_discrete_sequence=<SET, IF NECESSARY>)
+
+# Configure update_layout
+update_layout(
+    width=800,
+    height=600,
+    plot_bgcolor=None,
+    paper_bgcolor=None,
+    margin=dict(l=40, r=40, t=65, b=65),
+    font=dict(family="Open Sans, sans-serif"),
+    xaxis=dict(showgrid=True,
+               tickfont=dict(size=14),
+               showline=True,
+               linewidth=1,
+               linecolor='grey',
+               mirror=True,),
+    yaxis=dict(showgrid=True,
+               tickfont=dict(size=14),
+               showline=True,
+               linewidth=1,
+               linecolor='grey',
+               mirror=True),
+    title=dict(text=<SET>, font=dict(family="Open Sans, sans-serif"), x=0.08, font_size=20),)
+
+# Configure update_traces
+update_traces(marker=dict(line_width=0.7, line_color='#303030'),
+              hoverlabel=dict(bgcolor='#383838', font=dict(color='white')),
+              hovertemplate=<SET EX: "hovertemplate='<b>SET</b>: %{customdata[0]}<br><b>SET</b>...<extra></extra>">,)

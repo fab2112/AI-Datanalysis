@@ -1,0 +1,37 @@
+# Plot
+px.histogram(<SET EX: df = pd.DataFrame(DF_*)>,
+             x=<SET>,
+             nbins=50,)
+
+# Configure update_layout
+update_layout(
+    width=800,
+    height=600,
+    plot_bgcolor=None,
+    paper_bgcolor=None,
+    margin=dict(l=40, r=40, t=65, b=65), clickmode='event+select',
+    font=dict(family="Open Sans, sans-serif"),
+    xaxis=dict(showgrid=True,
+               tickfont=dict(size=14),
+               showline=True,
+               linewidth=1,
+               linecolor='grey',
+               mirror=True,
+               categoryorder='total ascending'),
+    yaxis=dict(showgrid=True,
+               tickfont=dict(size=14),
+               showline=True,
+               linewidth=1,
+               linecolor='grey',
+               mirror=True),
+    title=dict(text=<SET>,
+               font=dict(family="Open Sans, sans-serif"), x=0.08, font_size=20),
+    xaxis_title=dict(text=<SET>, font=dict(size=14)),
+    yaxis_title=dict(text=<SET>, font=dict(size=14)),
+    bargap=0.1,
+    legend_title=dict(text=<SET>))
+
+# Configure update_traces
+update_traces(marker=dict(line_width=0.7, line_color='#E8E8E8', opacity=1, cornerradius=4),
+              hoverlabel=dict(bgcolor='#383838', font=dict(color='white')),
+              hovertemplate=<SET EX: "hovertemplate='<b>DEFINIR</b>: %{x:,.2f}<br><b>DEFINIR</b>: %{y:,.2f}">)

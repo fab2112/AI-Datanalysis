@@ -1,0 +1,25 @@
+# Plot
+px.density_mapbox(<SET EX: df = pd.DataFrame(DF_*)>,
+                  lat=<SET>,
+                  lon=<SET>,
+                  z=<SET>,
+                  radius=20,
+                  zoom=4, 
+                  opacity=1.0,
+                  color_continuous_scale=<SET>,
+                  hover_data=<SET>)
+
+# Configure update_layout
+update_layout(width=800,
+              height=600,
+              plot_bgcolor=None,
+              paper_bgcolor=None,
+              mapbox_center=<SET>,
+              mapbox_style="dark",
+              margin=dict(l=40, r=40, t=65, b=65),
+              title=dict(text=<SET>, font=dict(family="Open Sans, sans-serif"), x=0.05, font_size=20),
+              legend_title=dict(text=<SET>))
+
+# Configure update_traces
+update_traces(hoverlabel=dict(bgcolor='#383838', font=dict(color='white')),
+              hovertemplate=<SET EX: "hovertemplate='<b>SET</b>: %{customdata[0]}<br><b>SET</b>: %{z:,.2f}">)

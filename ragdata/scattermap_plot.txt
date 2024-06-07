@@ -1,0 +1,25 @@
+# Plot
+px.scatter_mapbox(<SET EX: df = pd.DataFrame(DF_*)>,
+                  lat=<SET>,
+                  lon=<SET>,
+                  zoom=4,
+                  hover_data=<SET>,
+                  size_max=<SET>,
+                  color_continuous_scale=<SET>,)
+
+# Configure update_layout
+update_layout(width=800,
+              height=600,
+              plot_bgcolor=None,
+              paper_bgcolor=None,
+              mapbox_style="dark",
+              mapbox_center=<SET>,
+              margin=dict(l=40, r=40, t=65, b=65),
+              title=dict(text=<SET>, font=dict(family="Open Sans, sans-serif"), x=0.05, font_size=20),
+              legend_title=dict(text=<SET>),)
+
+# Configure update_traces
+update_traces(marker=dict(size=20, color=<SET>, opacity=0.5),
+              hoverlabel=dict(bgcolor='#383838', font=dict(color='white')),
+              hovertemplate=<SET>)
+

@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "AI-Datanalysis"
+version = "0.1.0"
+description = "AI-powered chatbot tool for data analysis."
+authors = ["Fabrício Siqueira"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "1.26.4"
+pandas = "1.5.3"
+streamlit = "1.34.0"
+plotly = "5.22.0"
+cohere = "5.3.4"
+statsmodels = "0.14.2"
+scipy = "1.13.0"
+scikit-learn = "1.4.2"
+langchain = "0.1.17"
+langchain-community = "0.0.36"
+langchain-cohere = "0.1.4"
+langchain-google-genai = "1.0.3"
+langchain-openai = "0.1.7"
+langchain-groq = "0.1.3"
+colorama = "0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+

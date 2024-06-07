@@ -1,0 +1,17 @@
+# docker-compose.yml
+version: '3.7'
+
+services:    
+  ai_datanalysis:
+    container_name: ai_datanalysis
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+      
+
+
+      
+      
+
+

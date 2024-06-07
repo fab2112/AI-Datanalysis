@@ -1,0 +1,27 @@
+# Plot
+px.choropleth_mapbox(<SET EX: df = pd.DataFrame(DF_*)>,
+                     geojson=GEOJSON[0],
+                     locations=<SET>,
+                     color=<SET>,
+                     color_continuous_scale=<SET>,
+                     mapbox_style="dark",
+                     zoom=4,
+                     opacity=1.0,
+                     center=dict(lat=-19.30, lon=-45.46))
+
+# Configure update_layout
+update_layout(margin=dict(l=40, r=40, t=65, b=65),
+              clickmode='event+select',
+              width=800,
+              height=600,
+              plot_bgcolor=None,
+              paper_bgcolor=None,
+              title=dict(text=<SET>,
+                         font=dict(family="Open Sans, sans-serif"),
+                         x=0.05, font_size=20),
+              xaxis_title=dict(text=<SET>, font=dict(size=14)),
+              yaxis_title=dict(text=<SET>, font=dict(size=14)),
+              legend_title=dict(text=<SET>),)
+
+# Configure update_traces
+update_traces(hoverlabel=dict(bgcolor='#383838', font=dict(color='white')))

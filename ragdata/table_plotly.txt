@@ -1,0 +1,21 @@
+# Plot
+import plotly.graph_objects as go
+go.Figure(data=[go.Table(
+    header=dict(values=['<b><SET</b>', '<b>SET</b>',...],
+                line_color='darkslategray',
+                fill_color='#1B5E20',
+                align=['left','center'],
+                font=dict(color='white' , size=14)),
+    cells=dict(values=<SET>,
+               line_color='darkslategray',
+               align=['left', 'center'],
+               font=dict(color='white', size=13 ),
+               fill_color='#333333'))])
+
+# Configure update_layout
+fig.update_layout(title_text=<SET>,
+                  paper_bgcolor=None,  
+                  plot_bgcolor=None,
+                  font=dict(color='white'),
+                  margin=dict(l=40, r=40, t=65, b=65),
+                  title=dict(font=dict(family="Open Sans, sans-serif"), x=0.05, font_size=17))
