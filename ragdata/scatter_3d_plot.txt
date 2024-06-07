@@ -4,6 +4,7 @@ px.scatter_3d(<SET EX: df = pd.DataFrame(DF_*)>,
               y=<SET>,
               z=<SET>,
               labels=<SET>,
+              color=<SET, WHEN REQUIRED>,
               color_discrete_sequence=px.colors.qualitative.Plotly,)
                     
 # Configure update_layout
