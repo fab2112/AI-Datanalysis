@@ -1,0 +1,227 @@
+1 - Density maps analysis
+
+- load sales_data.csv
+- set language (portuguese)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+- set mapbox api-key
+
+prompt:
+Crie um mapa de densidade das vendas por cidade. Use a paleta Plasma. Traga o mapa no estilo open street.
+
+
+2 - Scatter maps analysis
+
+- load sales_data.csv
+- set language (portuguese)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+- set mapbox api-key
+
+prompt:
+Crie um mapa de pontos das vendas por cidade. As cores dos pontos devem ser os produtos e o tamanho dos pontos os lucros obtidos.
+
+
+3 - Choropleth maps
+
+- load sales_data.csv
+- load geojson_brasil.json
+- set language (portuguese)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+- set mapbox api-key
+
+prompt:
+Traga um mapa coroplético dos lucros com base na coluna "states-ID". Marque as cidades das vendas com marcadores na cor vermelha e tamanho 10.
+
+
+4 - Scatter 3d analysis
+
+- load iris.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt:
+- Normalize the data from the first 4 columns and apply PCA, creating 3 main components.
+- Name these components PCA_1, PCA_2, and PCA_3. 
+- Apply the K-means algorithm to these components. 
+- Converting the K-means outputs into categorical values like: "cluster_1", "cluster_2" and "cluster_3". 
+- Plot a 3D graph of these values ​​with legend using colors from a beautiful palette.
+
+
+5 - OHLC data analysis
+
+- load ohlcv.csv
+- set language (portuguese)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt:
+Converta a coluna time no formato datetime. Selecione 30 primeiras amostras e plot um grafico de candle das colunas ohlc.
+
+
+6 - Bar plot analysis
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt:
+- Create a "#6495ED" color bar graph in descending order of cities with sales values.
+- Calculate the accumulated percentages of sales values ​​by city.
+- In the same figure, bring a orange line graph of the accumulated percentages (%), oriented by the second y-axis.
+- Set in hover for accumulated percentages to two decimal places.
+
+
+7 - Heatmap correlations
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt 1:
+Bring a correlation heatmap of sales, profits and costs data.
+
+- load cancer_data.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt 2:
+plot a correlation heatmap of the last 10 columns. Use lib figure factory. Use Eletric colors and show scale.
+
+
+8 - Surfaces analysis
+
+- load any dataset
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt:
+Create a surface graph using Gaussian data from -1 to 1 by numpy
+
+
+9 - Surfaces analysis
+
+- load everest_data.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt:
+- Create a grid interpolating altitude, latitude and longitude with a "linear" method using Scipy.
+- Plot a surface with the grid.
+- Set color scale "Ice".
+- Set the title "Mt. Everest surface".
+- Remove grids, legends, define axis names.
+
+
+10 - Pie plots analysis
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt:
+- Create a pie plot of cities.
+- Blow up the Campos sector.
+
+
+11 - Box-plot and Violin-plot
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt 1:
+Plot a boxplot graph of sales of São Paulo and Minas Gerais states in colors green and purpple. Set the points.
+
+prompt 2:
+convert to violin plot.
+
+
+12 - Polar plots analysis
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt 1:
+Plot a radar chart of states' sales by product
+
+prompt 2:
+Plot a polar bar chart of product sales. Use color palette Set2.
+
+
+13 - Machine Learning
+
+- load cancer_data.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt 1:
+- Load the DF_1 data and define the "diagnosis" column for variable Y and the other columns for variable X.
+- Normalize the X data using StandardScaler() and separate the X and Y data into 80% for training and 20% for testing.
+- Create a three-layer neural network (4, 4, 4) using the Sklearn module with the parameters: activation='relu', solver='adam', random_state=10, shuffle=False, learning_rate_init=0.02, max_iter=200, n_iter_no_change=200, batch_size=32 and verbose=True.
+- Perform model training and plot a red line graph with the loss curve and note the accuracy at the top of the graph.
+
+prompt 2:
+Calculate a confusion matrix of predicted values ​​with actual values and plot a heatmap using imshow plotly.
+
+
+14 - Manifold analysis
+
+- load digits.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt 1:
+- Normalize the data (*/255) and apply t-SNE, creating 3 components.
+- Name these components as C_1, C_2 and C_3.
+- Calculate 10 component clusters using KMeans and convert your outputs to categorical values.
+- Plot a 3D graph of these values ​​with legend.
+
+prompt 2:
+- Normaize the data and apply PCA, creating components PCA_1 e PCA_2.
+- Calculate 3 component clusters using KMeans and convert your outputs to categorical values.
+- Plot a scatter plot of these values ​​with legend.
+
+
+15 - Line and Area plots
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Groq_llama3-70B)
+- set temperature model to 0
+
+prompt:
+- Group sales by month and state.
+- Put the dates in month order.
+- Bring up an area graph with colors defined by states.
+- Enable markers and set the line shape to spline.
+
+
+16 - Scatter plots
+
+- load sales_data.csv
+- set language (english)
+- set model and api-key (Google_gemini-1.5-flash)
+- set temperature model to 0
+
+prompt 1:
+Analyze sales data and create a correlation chart between sales and costs. Use continuous color.
+
+prompt 2:
+Based on last graph, create a 3-dimensional version with the same colors
+
+
+

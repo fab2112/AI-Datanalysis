@@ -257,6 +257,23 @@ WHITELIST_ENV = ["json", "statsmodels", "scipy", "datetime"]
   <img src="imgs/img_28.png" width="1000">
 </h3><br />
 
+## Experiments reproducibility
+
+- Datasets and prompts available in the **datasets** directory
+
+
+| Datasets            | 
+| ------------------- | 
+| cancer_data.csv     |
+| everest_data.csv    | 
+| sales_data.csv      |
+| digits.csv          |
+| iris.csv            |
+| ohlcv.csv           |
+| geojson_brasil.json |
+
+<br />
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
