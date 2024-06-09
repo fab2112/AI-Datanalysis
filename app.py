@@ -274,8 +274,16 @@ def main() -> None:
     process_styles()
 
     # Header title
-    header = st.container(border=True)
+    st.markdown("####")
+    header = st.container(border=False)
+    header.markdown("####")
     header.header("AI-Datanalysis", divider="violet")
+    header.markdown("####")
+    header.markdown("##### A Chatbot tool powered by AI agent for analyzing and discovering knowledge in data")
+    header.markdown("##")
+    image_header = st.container(border=True)
+    image_header.image("./imgs/img_0.png")
+    st.markdown("##")
 
     with st.sidebar:
         st.header("Settings:", divider="grey")
