@@ -279,7 +279,7 @@ def main() -> None:
     header.markdown("####")
     header.header("AI-Datanalysis", divider="violet")
     header.markdown("####")
-    header.markdown("##### A Chatbot tool powered by AI agent for analyzing and discovering knowledge in data")
+    header.markdown("##### A Chatbot tool powered by LLM for data analysis and KDD processes")
     header.markdown("##")
     image_header = st.container(border=True)
     image_header.image("./imgs/img_0.png")
