@@ -28,7 +28,11 @@ The application's brain is heavily based on generative models (LLMs) integrated 
 
 ## Get started
 
-### Installation
+### Web app access
+
+- Access the web application here  [https://ai-datanalysis.streamlit.app/](https://ai-datanalysis.streamlit.app/)
+
+### Local installation
 
 #### Option-1 Docker (recommended):
 
@@ -59,7 +63,7 @@ streamlit run app.py
 
 ## Usage
 
-After installation access the app in the browser using the [http://0.0.0.0:8501](http://0.0.0.0:8501) or [http://localhost:8501](http://localhost:8501)
+- After installation access the app in the browser using the [http://0.0.0.0:8501](http://0.0.0.0:8501) or [http://localhost:8501](http://localhost:8501)
 
 ### Load dataset
 
@@ -106,6 +110,8 @@ WHITELIST_ENV = ["json", "statsmodels", "scipy", "datetime"]
 <br/>
 
 ## LLMs available
+
+- Obtain the api-key for use in app according to the desired model
 
 |        | Model                   | Api-Key URL                                            |
 | ------ | ----------------------- | ------------------------------------------------------ |
