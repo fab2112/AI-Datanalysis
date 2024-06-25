@@ -99,6 +99,14 @@ streamlit run app.py
   <img src="imgs/img_5.png" width="300">
 </h3>
 
+### Get Python codes
+
+- Get all Python code response solutions
+
+<h3 align="left">
+  <img src="imgs/img_29.png" width="700">
+</h3>
+
 ### Add new modules to environment
 
 - For adding new modules to environment execution set WHITELIST_ENV in app.py
